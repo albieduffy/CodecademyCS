@@ -16,18 +16,18 @@ def list_censor(email):
         email = email.replace(term, '-' * len(term))
     return email
 
-# def negative_censor(email):
-#     email_temp = ''
-#     first_instance = []
-#     for word in email:
-#         if word in negative_words:
-#             if word in first_instance:
-#                 email_temp += '-----'
-#             else:
-#                 first_instance.append(word)
-#                 email_temp += word
-#         else:
-#             email_temp += word
+def negative_censor(email):
+    email_temp = ''
+    first_instance = []
+    for word in email:
+        if word in negative_words:
+            if word in first_instance:
+                email_temp += '-----'
+            else:
+                first_instance.append(word)
+                email_temp += word
+        else:
+            email_temp += word
 
 # def all_censor(email):
 #     return True
